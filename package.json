@@ -1,0 +1,52 @@
+{
+  "author": {
+    "name": "zhxf",
+    "company": "qlsc"
+  },
+  "name": "qlsc_zhxf",
+  "version": "0.0.1-pre",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/sound-of-destiny/qlsc_zhxf.git"
+  },
+  "devDependencies": {
+
+  },
+  "scripts": {
+    "dev": "webpack --progress --colors --mode development --config scripts/webpack/webpack.dev.js",
+    "start": "webpack-dev-server --progress --colors --mode development --config scripts/webpack/webpack.hot.js",
+    "watch": "webpack --progress --colors --watch --mode development --config scripts/webpack/webpack.dev.js",
+    "build": "grunt build",
+    "test": "grunt test",
+    "lint": "tslint -c tslint.json --project tsconfig.json",
+    "jest": "jest --notify --watch",
+    "api-tests": "jest --notify --watch --config=tests/api/jest.js",
+    "precommit": "lint-staged && grunt precommit"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.scss": [
+      "prettier --write",
+      "git add"
+    ],
+    "*pkg/**/*.go": [
+      "gofmt -w -s",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "printWidth": 120
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+
+  },
+  "resolutions": {
+
+  }
+}

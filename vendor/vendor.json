@@ -1,0 +1,1278 @@
+{
+	"comment": "",
+	"ignore": "test",
+	"package": [
+		{
+			"checksumSHA1": "AH7jcN7pvaPDU6UjHdpT081DDGk=",
+			"origin": "github.com/grafana/grafana/vendor/cloud.google.com/go/compute/metadata",
+			"path": "cloud.google.com/go/compute/metadata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "xszbuM/88PjnW0GM8Febc1D8jaM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/BurntSushi/toml",
+			"path": "github.com/BurntSushi/toml",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "HnLytYr8YyrXOC1hMsy9XYn7doc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/Unknwon/com",
+			"path": "github.com/Unknwon/com",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "HMprV7cCLNTbfmIheFFyQ29ZNtQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws",
+			"path": "github.com/aws/aws-sdk-go/aws",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Y9W+4GimK4Fuxq+vyIskVYFRnX4=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/awserr",
+			"path": "github.com/aws/aws-sdk-go/aws/awserr",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "yyYr41HZ1Aq0hWc3J5ijXwYEcac=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/awsutil",
+			"path": "github.com/aws/aws-sdk-go/aws/awsutil",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "EwL79Cq6euk+EV/t/n2E+jzPNmU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/client",
+			"path": "github.com/aws/aws-sdk-go/aws/client",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "uEJU4I6dTKaraQKvrljlYKUZwoc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/client/metadata",
+			"path": "github.com/aws/aws-sdk-go/aws/client/metadata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "vVSUnICaD9IaBQisCfw0n8zLwig=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/corehandlers",
+			"path": "github.com/aws/aws-sdk-go/aws/corehandlers",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "6ZJdonFWK4NWkFscrX0LYorb+x0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/credentials",
+			"path": "github.com/aws/aws-sdk-go/aws/credentials",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "u3GOAJLmdvbuNUeUEcZSEAOeL/0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds",
+			"path": "github.com/aws/aws-sdk-go/aws/credentials/ec2rolecreds",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "NUJUTWlc1sV8b7WjfiYc4JZbXl0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/credentials/endpointcreds",
+			"path": "github.com/aws/aws-sdk-go/aws/credentials/endpointcreds",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "JEYqmF83O5n5bHkupAzA6STm0no=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/credentials/stscreds",
+			"path": "github.com/aws/aws-sdk-go/aws/credentials/stscreds",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "W4R+WW4t2Ty5mbKypFoATk3tqTA=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/csm",
+			"path": "github.com/aws/aws-sdk-go/aws/csm",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "HogDW/Wu6ZKTDrQ2HSzG8/vj9Ag=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/defaults",
+			"path": "github.com/aws/aws-sdk-go/aws/defaults",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "pDnK93CqjQ4ROSW8Y/RuHXjv52M=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/ec2metadata",
+			"path": "github.com/aws/aws-sdk-go/aws/ec2metadata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "IUxOkYujixURbZpx7mB5rf15cYg=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/endpoints",
+			"path": "github.com/aws/aws-sdk-go/aws/endpoints",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "CYLheDSqXftEAmmdj+tTiT+83Ko=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/request",
+			"path": "github.com/aws/aws-sdk-go/aws/request",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "+d8hhT6Ih+DsRpkF44pvw+IkI7w=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/session",
+			"path": "github.com/aws/aws-sdk-go/aws/session",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "u3cA2IiD36A+VnFIH7XtGjYk2NU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/aws/signer/v4",
+			"path": "github.com/aws/aws-sdk-go/aws/signer/v4",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "wjxQlU1PYxrDRFoL1Vek8Wch7jk=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/internal/sdkio",
+			"path": "github.com/aws/aws-sdk-go/internal/sdkio",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "MYLldFRnsZh21TfCkgkXCT3maPU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/internal/sdkrand",
+			"path": "github.com/aws/aws-sdk-go/internal/sdkrand",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "04ypv4x12l4q0TksA1zEVsmgpvw=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/internal/shareddefaults",
+			"path": "github.com/aws/aws-sdk-go/internal/shareddefaults",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Ij9RP5HrBWBYYb3/LEMHNNZXH9g=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol",
+			"path": "github.com/aws/aws-sdk-go/private/protocol",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "2ywNMWQ3qxbz/dzuuOC/42xXzWM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/eventstream",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/eventstream",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "/JJPEdYxSgTTDqUDTAaSJQSKNn0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamapi",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/eventstream/eventstreamapi",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "SBBVYdLcocjdPzMWgDuR8vcOfDQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/query",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/query",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "9V1PvtFQ9MObZTc3sa86WcuOtOU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/query/queryutil",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/query/queryutil",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "/2Ppb4vP/H+B3cM7bOOEeA7Z0iY=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/rest",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/rest",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "ODo+ko8D6unAxZuN1jGzMcN4QCc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/restxml",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/restxml",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "6zosteWJqUGM9+t9dkANQymMA9s=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil",
+			"path": "github.com/aws/aws-sdk-go/private/protocol/xml/xmlutil",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "nWA8sdsU3+nBLaN1Jk0zWRtuD6Q=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/service/s3",
+			"path": "github.com/aws/aws-sdk-go/service/s3",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "uguCtF1eoCG71dvEVqrYbFs7py0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/aws/aws-sdk-go/service/sts",
+			"path": "github.com/aws/aws-sdk-go/service/sts",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "xjIg/s16MaDzV/Mwei/EPC3hcFQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/benbjohnson/clock",
+			"path": "github.com/benbjohnson/clock",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "gE7lqhlhEBBeppi1w6TgoW/BasQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/beorn7/perks/quantile",
+			"path": "github.com/beorn7/perks/quantile",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "fvVoeETRxg13N2GlxydO+5slZdM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/bradfitz/gomemcache/memcache",
+			"path": "github.com/bradfitz/gomemcache/memcache",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "dvabztWVQX8f6oMLRyv4dLH+TGY=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/davecgh/go-spew/spew",
+			"path": "github.com/davecgh/go-spew/spew",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "3EDJ0CO7vuVr4S90zhjSmweWMYg=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-ini/ini",
+			"path": "github.com/go-ini/ini",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "0KJID43zMb+Y00+mGthNa50wMqs=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-ldap/ldap",
+			"path": "github.com/go-ldap/ldap",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "k1X6OL32Twm6qWo9n6e7Hhb80WI=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/binding",
+			"path": "github.com/go-macaron/binding",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QEvENlNOhSTYdS37o86g7gxcH2A=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/gzip",
+			"path": "github.com/go-macaron/gzip",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "4PhN/8YESDAnO9jSVy7F28fjy9c=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/inject",
+			"path": "github.com/go-macaron/inject",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "tkPvfo1djfS+lttPy41SgVq2bj8=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/session",
+			"path": "github.com/go-macaron/session",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "ieiVAzQLJJ0DFkDf1TaF6oZ560k=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/session/memcache",
+			"path": "github.com/go-macaron/session/memcache",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "8CFgIbh+mQuLzXXHKUKVH4P5MAU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/session/postgres",
+			"path": "github.com/go-macaron/session/postgres",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "nFd+tCX5IPqCbREY693Q8qV2gSI=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-macaron/session/redis",
+			"path": "github.com/go-macaron/session/redis",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "i+8Gg+uZWzpzqaLQ2yhEjk6l3Dg=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-sql-driver/mysql",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "qhKTBDu2QHCbsyUVfdCcc7kgv64=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-stack/stack",
+			"path": "github.com/go-stack/stack",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "LgRT40jbx6pCJvxPasP1jNvY3Lc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-xorm/builder",
+			"path": "github.com/go-xorm/builder",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "3E4dA61RNRA1chQlPuxNl/vYyrg=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-xorm/core",
+			"path": "github.com/go-xorm/core",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Bf14xxMUFzUoWQ7yLapy5pSWY1s=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/go-xorm/xorm",
+			"path": "github.com/go-xorm/xorm",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "3Xl2eFF4Q+bZkX2RIrIZUkYDRdk=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/golang/protobuf/proto",
+			"path": "github.com/golang/protobuf/proto",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "tkJPssYejSjuAwE2tdEnoEIj93Q=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/golang/protobuf/ptypes",
+			"path": "github.com/golang/protobuf/ptypes",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "HPUYQ3vxSaUx4VauJqN7vQmQZ8g=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/golang/protobuf/ptypes/any",
+			"path": "github.com/golang/protobuf/ptypes/any",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Z8OvzrhBoBiE1EePETSyLpuFYIA=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/golang/protobuf/ptypes/duration",
+			"path": "github.com/golang/protobuf/ptypes/duration",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "AjaT5QNNFaVmIn+FD6bXhWNbe7c=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/golang/protobuf/ptypes/timestamp",
+			"path": "github.com/golang/protobuf/ptypes/timestamp",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "wpxPw+4dx4Taf7Qb2kKVWdkpFLI=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/gorilla/websocket",
+			"path": "github.com/gorilla/websocket",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "URvNGb4913QyoaBcqV3bQp8SOZs=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/gosimple/slug",
+			"path": "github.com/gosimple/slug",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "P5w6jO3qcBrZPf4a3KQM2/D4pTw=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/grafana/grafana-plugin-model/go/datasource",
+			"path": "github.com/grafana/grafana-plugin-model/go/datasource",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "mYM6jMXWgb9WvV2XQaBbgs3f9MA=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/grafana/grafana-plugin-model/go/renderer",
+			"path": "github.com/grafana/grafana-plugin-model/go/renderer",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "R7NgD6cCY7VDJIRdNGKUGsSf2VQ=",
+			"path": "github.com/grafana/grafana/pkg/api",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "FBhc+ihJuPJgIQ59z8p8ld1K0G0=",
+			"path": "github.com/grafana/grafana/pkg/api/avatar",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "NE4plaHXaLigvea3X8/cYtB8n6g=",
+			"path": "github.com/grafana/grafana/pkg/api/dtos",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "RrCYuxuTgEvggBeD50x5G88AyDY=",
+			"path": "github.com/grafana/grafana/pkg/api/live",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "MXSY3KjLNkW1BeWwT4Ag0hi35Jc=",
+			"path": "github.com/grafana/grafana/pkg/api/pluginproxy",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "aCmEumA3oYKD0f1ElbyZa+xlV+I=",
+			"path": "github.com/grafana/grafana/pkg/api/routing",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "eDaB2FqEgi2iy+GhF7ChDsQ3+cQ=",
+			"path": "github.com/grafana/grafana/pkg/api/static",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "ivd42WtQWO37UkCMiuu8MzW0Fw0=",
+			"path": "github.com/grafana/grafana/pkg/bus",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "pod/lcqyYyFr8yAEL/1kAWLNqVI=",
+			"path": "github.com/grafana/grafana/pkg/components/apikeygen",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "jdhe1Cgd5rwBhOgHkwHKjvcERPs=",
+			"path": "github.com/grafana/grafana/pkg/components/dashdiffs",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "oJKdhTRaTckLAOww42Azd9asqhs=",
+			"path": "github.com/grafana/grafana/pkg/components/imguploader",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "M1x4Oo/Z4uKle1Gv9qNBJTtPbQ4=",
+			"path": "github.com/grafana/grafana/pkg/components/null",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "FrIkemLvjFY1Ot9W48uSEdbRQHU=",
+			"path": "github.com/grafana/grafana/pkg/components/securejsondata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "obCLBU8rYxifIssVeX+vDj7ODkg=",
+			"path": "github.com/grafana/grafana/pkg/components/simplejson",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "DndBWF2MfonkkENI/ioXD4E/hqs=",
+			"path": "github.com/grafana/grafana/pkg/events",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "oEJvHm8Tu/w1KUYFKnTQpwvYF5E=",
+			"path": "github.com/grafana/grafana/pkg/log",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "pHAwGNt2MXgBu0tYJgmomIbCPKI=",
+			"path": "github.com/grafana/grafana/pkg/login",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "aROh/XfVVKIB/iCJQtXL4XcVHNc=",
+			"path": "github.com/grafana/grafana/pkg/metrics",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "mY935n1+LwvNXpf7Abk1T0mLyrs=",
+			"path": "github.com/grafana/grafana/pkg/metrics/graphitebridge",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "pPDuDLTJHYEPdR5cFLrPVpUu0U0=",
+			"path": "github.com/grafana/grafana/pkg/middleware",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "YOHv20B3ZLcOER4JinG/ATgvckY=",
+			"path": "github.com/grafana/grafana/pkg/models",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "FPPse4GsRaRcUZWXk+fFCJLSqNA=",
+			"path": "github.com/grafana/grafana/pkg/plugins",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "J/mFNHx0qPSLcolFYy7T5es6BV0=",
+			"path": "github.com/grafana/grafana/pkg/plugins/datasource/wrapper",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "3Lw1iBgmK2egSws9JECzkX1hbxs=",
+			"path": "github.com/grafana/grafana/pkg/registry",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Nr3iVAy5rg4o1l1PDMhYBK7rDMY=",
+			"path": "github.com/grafana/grafana/pkg/services/alerting",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "zre3/MFX4JWo5Nmy9fEbxPWJDSI=",
+			"path": "github.com/grafana/grafana/pkg/services/annotations",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "5lHEevGuKK3ZnZUwFi4EXbHZ+FI=",
+			"path": "github.com/grafana/grafana/pkg/services/dashboards",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "UIY0rUvmIlSTtcWcXzcKR127UOI=",
+			"path": "github.com/grafana/grafana/pkg/services/guardian",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "f0TN1P/2sOjHdSAdb1aA9wp1mOo=",
+			"path": "github.com/grafana/grafana/pkg/services/quota",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "S0gPf1Zox3EZ8nM0Lit4aIw/KAI=",
+			"path": "github.com/grafana/grafana/pkg/services/rendering",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QidN/7Q1dHtPGi3lIThXBugg9nw=",
+			"path": "github.com/grafana/grafana/pkg/services/search",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "LqM/397ccqmrd9Z4ykCTzAKe3Fg=",
+			"path": "github.com/grafana/grafana/pkg/services/session",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "VMxAknRTufQAR0xinaBM09tEPD0=",
+			"path": "github.com/grafana/grafana/pkg/services/sqlstore/migrator",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "r0EppIake13RoU1vy8St3AuemIE=",
+			"path": "github.com/grafana/grafana/pkg/setting",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "y890l0+8UW6utm5Ael5m01moutI=",
+			"path": "github.com/grafana/grafana/pkg/social",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "n2gLSmMgBv5zBhLl1ett1ilSREc=",
+			"path": "github.com/grafana/grafana/pkg/tsdb",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QYHSFQQt0P3HbcG/7SWBNkUYOVY=",
+			"path": "github.com/grafana/grafana/pkg/tsdb/testdata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "GytFfxlCtZNEtMDXMtpsJYI+XDQ=",
+			"path": "github.com/grafana/grafana/pkg/util",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "S0SsJaJ+JOIUeGcLfsUsgtWFT0g=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/hashicorp/go-hclog",
+			"path": "github.com/hashicorp/go-hclog",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "fVtV3etLwQrXTdCq7d065/znpXM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/hashicorp/go-plugin",
+			"path": "github.com/hashicorp/go-plugin",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QZEMf01YVg1vZHfiBi+nR93ngmA=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/hashicorp/go-version",
+			"path": "github.com/hashicorp/go-version",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "fw/Ho2xZf/Q4IEwhOkkwFhth9d8=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/hashicorp/yamux",
+			"path": "github.com/hashicorp/yamux",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "fDZopkhCQxggu2fkye7LGKtzpw8=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/inconshreveable/log15",
+			"path": "github.com/inconshreveable/log15",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "q1lrlObp9XHB3aAkOgEljyLFAXY=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/jmespath/go-jmespath",
+			"path": "github.com/jmespath/go-jmespath",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "KKxbAKrKrfd33YPpkNsDmTN3S+M=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/klauspost/compress/flate",
+			"path": "github.com/klauspost/compress/flate",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "V1lQwkoDR1fPmZBSgkmZjgZofeU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/klauspost/compress/gzip",
+			"path": "github.com/klauspost/compress/gzip",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "o95uo+q8D0u5wPyF/AAhBh1Ozxc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/klauspost/cpuid",
+			"path": "github.com/klauspost/cpuid",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "VkpFSMYII1FGCXwbWvCENTCdC7g=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/klauspost/crc32",
+			"path": "github.com/klauspost/crc32",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "8vUP1NaZZilCEYF/3lnnldi1Roo=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/lib/pq",
+			"path": "github.com/lib/pq",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "AU3fA8Sm33Vj9PBoRPSeYfxLRuE=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/lib/pq/oid",
+			"path": "github.com/lib/pq/oid",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "TvjlBcJWumrZiKCFWEKSIcvWOjQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/mattn/go-colorable",
+			"path": "github.com/mattn/go-colorable",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "lfn20o8UQyaq8aWKQU98qRMJlVA=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/mattn/go-isatty",
+			"path": "github.com/mattn/go-isatty",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "UFaCzY5vp0u6uwPh/Dv9DY/kC0k=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/mattn/go-sqlite3",
+			"path": "github.com/mattn/go-sqlite3",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "aodj/cITRyuaZSh84DDhrZjh76U=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/matttproud/golang_protobuf_extensions/pbutil",
+			"path": "github.com/matttproud/golang_protobuf_extensions/pbutil",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "zB3ORiTGcjrhvKG8ZvJ4r9IY64A=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/mitchellh/go-testing-interface",
+			"path": "github.com/mitchellh/go-testing-interface",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "lqoAxSBl5SB1l1bv3OgFfEl8YDM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/oklog/run",
+			"path": "github.com/oklog/run",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "hMwX5yFl85NYSAYzuaxFOprABXQ=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/opentracing/opentracing-go",
+			"path": "github.com/opentracing/opentracing-go",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "XPOyfxsryU1pByZESwduVu9OEQU=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/opentracing/opentracing-go/ext",
+			"path": "github.com/opentracing/opentracing-go/ext",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "+rbKrafLHDnrQFgeWawo9tfZhV4=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/opentracing/opentracing-go/log",
+			"path": "github.com/opentracing/opentracing-go/log",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QrYjzvpPctY2JjHBxCtFaFT8gfM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/patrickmn/go-cache",
+			"path": "github.com/patrickmn/go-cache",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "nQIYmvNdyUi3sCUMmdS0zlHEAcI=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/client_golang/prometheus",
+			"path": "github.com/prometheus/client_golang/prometheus",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "wsAkYlRRUNx+OAuUOIqdjO7dICM=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/client_golang/prometheus/promhttp",
+			"path": "github.com/prometheus/client_golang/prometheus/promhttp",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "DvwvOlPNAgRntBzt3b3OSRMS2N4=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/client_model/go",
+			"path": "github.com/prometheus/client_model/go",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "vPdC/DzEm7YbzRir2wwnpLPfay8=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/common/expfmt",
+			"path": "github.com/prometheus/common/expfmt",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "GP5CS3lUnZ3JAxBWqUj4ZMKU9dg=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg",
+			"path": "github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "EXTRY7DL9gFW8c341Dk6LDXCBn8=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/common/model",
+			"path": "github.com/prometheus/common/model",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "WBQxPc/l43ISNiPI30jPXemF064=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/procfs",
+			"path": "github.com/prometheus/procfs",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "lv9rIcjbVEGo8AT1UCUZXhXrfQc=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/procfs/internal/util",
+			"path": "github.com/prometheus/procfs/internal/util",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "HSP5hVT0CNMRa8+Xtz4z2Ic5U0E=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/procfs/nfs",
+			"path": "github.com/prometheus/procfs/nfs",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "yItvTQLUVqm/ArLEbvEhqG0T5a0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/prometheus/procfs/xfs",
+			"path": "github.com/prometheus/procfs/xfs",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "lIjaz6CZ7bXsbIiCVWFcX74uFJY=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/rainycape/unidecode",
+			"path": "github.com/rainycape/unidecode",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "UwtyqB7CaUWPlw0DVJQvw0IFQZs=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/sergi/go-diff/diffmatchpatch",
+			"path": "github.com/sergi/go-diff/diffmatchpatch",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "89JVOvIp9CN49redQk7v3PisVSs=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/teris-io/shortid",
+			"path": "github.com/teris-io/shortid",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "3UTLXEiXkpZy/cCMGkOxXsM5FOk=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/yudai/gojsondiff",
+			"path": "github.com/yudai/gojsondiff",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "7/V6fDOOfkmSHQahCK+J5G4Y1uk=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/yudai/gojsondiff/formatter",
+			"path": "github.com/yudai/gojsondiff/formatter",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "1ZiZ8YzfAw392HihneTMlmS/AU0=",
+			"origin": "github.com/grafana/grafana/vendor/github.com/yudai/golcs",
+			"path": "github.com/yudai/golcs",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "1MGpGDQqnUoRpv7VEcQrXOBydXE=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/crypto/pbkdf2",
+			"path": "golang.org/x/crypto/pbkdf2",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "GtamqiJoL7PGHsN454AoffBFMa8=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/context",
+			"path": "golang.org/x/net/context",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "WHc3uByvGaMcnSoI21fhzYgbOgg=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/context/ctxhttp",
+			"path": "golang.org/x/net/context/ctxhttp",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "c3H2wB/3tGrw6VqCnlye+kSdoXU=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/http/httpguts",
+			"path": "golang.org/x/net/http/httpguts",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "vwwFGyerei6T51vgvR6QMrGFkx4=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/http2",
+			"path": "golang.org/x/net/http2",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "leSW9aM30mATlWs/eeqhQQh/3eo=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/http2/hpack",
+			"path": "golang.org/x/net/http2/hpack",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "RcrB7tgYS/GMW4QrwVdMOTNqIU8=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/idna",
+			"path": "golang.org/x/net/idna",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "UxahDzW2v4mf/+aFxruuupaoIwo=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/internal/timeseries",
+			"path": "golang.org/x/net/internal/timeseries",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "rJn3m/27kO+2IU6KCCZ74Miby+8=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/net/trace",
+			"path": "golang.org/x/net/trace",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "zVUMRGUN1pif4ho0lcvhKCR3phQ=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/oauth2",
+			"path": "golang.org/x/oauth2",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "z7mSaGccufg15ki2YPd+M5PlsUc=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/oauth2/google",
+			"path": "golang.org/x/oauth2/google",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "usB28vqcSrnYAqpQaJksguVZiew=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/oauth2/internal",
+			"path": "golang.org/x/oauth2/internal",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "huVltYnXdRFDJLgp/ZP9IALzG7g=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/oauth2/jws",
+			"path": "golang.org/x/oauth2/jws",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QPndO4ODVdEBILRhJ6869UDAoHc=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/oauth2/jwt",
+			"path": "golang.org/x/oauth2/jwt",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "S0DP7Pn7sZUmXc55IzZnNvERu6s=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/sync/errgroup",
+			"path": "golang.org/x/sync/errgroup",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "DkTVhnH/r+tY61nN+H0YMJ44szU=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/sys/unix",
+			"path": "golang.org/x/sys/unix",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "CbpjEkkOeh0fdM/V8xKDdI0AA88=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/text/secure/bidirule",
+			"path": "golang.org/x/text/secure/bidirule",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "ziMb9+ANGRJSSIuxYdRbA+cDRBQ=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/text/transform",
+			"path": "golang.org/x/text/transform",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "w8kDfZ1Ug+qAcVU0v8obbu3aDOY=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/text/unicode/bidi",
+			"path": "golang.org/x/text/unicode/bidi",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "BCNYmf4Ek93G4lk5x3ucNi/lTwA=",
+			"origin": "github.com/grafana/grafana/vendor/golang.org/x/text/unicode/norm",
+			"path": "golang.org/x/text/unicode/norm",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "2iGEpqdA3KpuCNSWW6KPCIhpXl4=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/genproto/googleapis/rpc/status",
+			"path": "google.golang.org/genproto/googleapis/rpc/status",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "/U1unXGq75Sjk63bnLJ7qJ+nuKo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc",
+			"path": "google.golang.org/grpc",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "xBhmO0Vn4kzbmySioX+2gBImrkk=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/balancer",
+			"path": "google.golang.org/grpc/balancer",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "CPWX/IgaQSR3+78j4sPrvHNkW+U=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/balancer/base",
+			"path": "google.golang.org/grpc/balancer/base",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "DJ1AtOk4Pu7bqtUMob95Hw8HPNw=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/balancer/roundrobin",
+			"path": "google.golang.org/grpc/balancer/roundrobin",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "j8Qs+yfgwYYOtodB/1bSlbzV5rs=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/codes",
+			"path": "google.golang.org/grpc/codes",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "XH2WYcDNwVO47zYShREJjcYXm0Y=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/connectivity",
+			"path": "google.golang.org/grpc/connectivity",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "KthiDKNPHMeIu967enqtE4NaZzI=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/credentials",
+			"path": "google.golang.org/grpc/credentials",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "mJTBJC0n9J2CV+tHX+dJosYOZmg=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/encoding",
+			"path": "google.golang.org/grpc/encoding",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "LKKkn7EYA+Do9Qwb2/SUKLFNxoo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/encoding/proto",
+			"path": "google.golang.org/grpc/encoding/proto",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "7A8YSxvEgjJCHKoD9KArEHlPH3s=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/grpclb/grpc_lb_v1/messages",
+			"path": "google.golang.org/grpc/grpclb/grpc_lb_v1/messages",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "ntHev01vgZgeIh5VFRmbLx/BSTo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/grpclog",
+			"path": "google.golang.org/grpc/grpclog",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "DyM0uqLtknaI4THSc3spn9XlL+g=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/health",
+			"path": "google.golang.org/grpc/health",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "25K6Z08Qic4Lt5wTw/w7zj1lGeg=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/health/grpc_health_v1",
+			"path": "google.golang.org/grpc/health/grpc_health_v1",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Qvf3zdmRCSsiM/VoBv0qB/naHtU=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/internal",
+			"path": "google.golang.org/grpc/internal",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "hcuHgKp8W0wIzoCnNfKI8NUss5o=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/keepalive",
+			"path": "google.golang.org/grpc/keepalive",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "RUgjR0iUFLCgdLAnNqiH+8jTzuk=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/metadata",
+			"path": "google.golang.org/grpc/metadata",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "5dwF592DPvhF2Wcex3m7iV6aGRQ=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/naming",
+			"path": "google.golang.org/grpc/naming",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "n5EgDdBqFMa2KQFhtl+FF/4gIFo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/peer",
+			"path": "google.golang.org/grpc/peer",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "qbA3XLvX0RTvaqQefvFDtE9GaJs=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/resolver",
+			"path": "google.golang.org/grpc/resolver",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "WpWF+bDzObsHf+bjoGpb/abeFxo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/resolver/dns",
+			"path": "google.golang.org/grpc/resolver/dns",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "zs9M4xE8Lyg4wvuYvR00XoBxmuw=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/resolver/passthrough",
+			"path": "google.golang.org/grpc/resolver/passthrough",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "YclPgme2gT3S0hTkHVdE1zAxJdo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/stats",
+			"path": "google.golang.org/grpc/stats",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "FXiovlBmrYdS4QT0Z4nV+x+v5HI=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/status",
+			"path": "google.golang.org/grpc/status",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "qvArRhlrww5WvRmbyMF2mUfbJew=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/tap",
+			"path": "google.golang.org/grpc/tap",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "sg7RY87LaWXaZMj0cuLQQaJJQYo=",
+			"origin": "github.com/grafana/grafana/vendor/google.golang.org/grpc/transport",
+			"path": "google.golang.org/grpc/transport",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Jb1zRNUjlhsXDM0UAv0Yl2S0PvM=",
+			"origin": "github.com/grafana/grafana/vendor/gopkg.in/asn1-ber.v1",
+			"path": "gopkg.in/asn1-ber.v1",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "7DltpXdFP8JHhVQLyZsAyFiPX0o=",
+			"origin": "github.com/grafana/grafana/vendor/gopkg.in/bufio.v1",
+			"path": "gopkg.in/bufio.v1",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "QXGH7wp49ISEZP7apfoVV2Oumm4=",
+			"origin": "github.com/grafana/grafana/vendor/gopkg.in/ini.v1",
+			"path": "gopkg.in/ini.v1",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "RiKMp5klXAdSoZPtlzSOPZDqHZw=",
+			"origin": "github.com/grafana/grafana/vendor/gopkg.in/macaron.v1",
+			"path": "gopkg.in/macaron.v1",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		},
+		{
+			"checksumSHA1": "Ex/b8Ed5aoP9ZrdahzcBhTqD6mk=",
+			"origin": "github.com/grafana/grafana/vendor/gopkg.in/redis.v2",
+			"path": "gopkg.in/redis.v2",
+			"revision": "bf2abc6940e23411a2bd5ae08d9a5a5659732d28",
+			"revisionTime": "2018-09-29T21:45:28Z"
+		}
+	],
+	"rootPath": "github.com/sound-of-destiny/qlsc_zhxf"
+}
