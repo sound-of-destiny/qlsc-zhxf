@@ -10,3 +10,6 @@
 
 # Ignore OSX indexing
 .DS_Store
+
+#
+/data/*

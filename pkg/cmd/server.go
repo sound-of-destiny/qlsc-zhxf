@@ -4,20 +4,26 @@ import (
 	"context"
 	"flag"
 	"fmt"
+
+	"io/ioutil"
 	"net"
 	"os"
+	"path/filepath"
+	"strconv"
 	"time"
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
 
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/login"
+
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/routing"
 
 	"golang.org/x/sync/errgroup"
 )
 
-func NewServer() *NewServerImpl{
+func NewServer() *NewServerImpl {
 	rootCtx, shutdownFn := context.WithCancel(context.Background())
 	childRoutines, childCtx := errgroup.WithContext(rootCtx)
 
@@ -45,9 +51,9 @@ type NewServerImpl struct {
 
 func (g *NewServerImpl) Run() error {
 	g.loadConfiguration()
-	//g.writePIDFile()
+	g.writePIDFile()
 
-	//login.Init()
+	login.Init()
 	//social.NewOAuthService()
 
 	//serviceGraph := inject.Graph{}
@@ -163,6 +169,28 @@ func (g *NewServerImpl) Exit(reason error) int {
 
 	g.log.Error("Server shutdown", "reason", reason)
 	return code
+}
+
+func (g *NewServerImpl) writePIDFile() {
+	if *pidFile == "" {
+		return
+	}
+
+	// Ensure the required directory structure exists.
+	err := os.MkdirAll(filepath.Dir(*pidFile), 0700)
+	if err != nil {
+		g.log.Error("Failed to verify pid directory", "error", err)
+		os.Exit(1)
+	}
+
+	// Retrieve the PID and write it.
+	pid := strconv.Itoa(os.Getpid())
+	if err := ioutil.WriteFile(*pidFile, []byte(pid), 0644); err != nil {
+		g.log.Error("Failed to write pidfile", "error", err)
+		os.Exit(1)
+	}
+
+	g.log.Info("Writing PID file", "path", *pidFile, "pid", pid)
 }
 
 func sendSystemdNotification(state string) error {

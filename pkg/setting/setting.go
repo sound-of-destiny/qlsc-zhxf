@@ -23,7 +23,6 @@ import (
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/util"
-
 )
 
 type Scheme string
@@ -375,7 +374,7 @@ func evalConfigValues(file *ini.File) {
 	}
 }
 
-//获取
+//获取custom.ini,覆盖defaults.ini
 func loadSpecifedConfigFile(configFile string, masterFile *ini.File) error {
 	if configFile == "" {
 		configFile = filepath.Join(HomePath, CustomInitPath)
@@ -414,7 +413,6 @@ func loadSpecifedConfigFile(configFile string, masterFile *ini.File) error {
 	return nil
 }
 
-
 //加载default.ini文件
 func loadConfiguration(args *CommandLineArgs) (*ini.File, error) {
 	var err error
@@ -425,7 +423,7 @@ func loadConfiguration(args *CommandLineArgs) (*ini.File, error) {
 
 	// check if config file exists
 	if _, err := os.Stat(defaultConfigFile); os.IsNotExist(err) {
-		fmt.Println("Grafana-server Init Failed: Could not find config defaults, make sure homepath command line parameter is set or working directory is homepath")
+		fmt.Println("NewServer Init Failed: Could not find config defaults, make sure homepath command line parameter is set or working directory is homepath")
 		os.Exit(1)
 	}
 
