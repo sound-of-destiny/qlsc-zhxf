@@ -1,25 +1,31 @@
 package plugins
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/registry"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/util"
 	"io/ioutil"
 	"os"
+	"path"
 	"path/filepath"
 	"reflect"
 	"strings"
+	"time"
 )
 
 var (
-	/*DataSources  map[string]*DataSourcePlugin
+	DataSources  map[string]*DataSourcePlugin
 	Panels       map[string]*PanelPlugin
 	StaticRoutes []*PluginStaticRoute
-	Apps         map[string]*AppPlugin*/
-	Plugins     map[string]*PluginBase
-	PluginTypes map[string]interface{}
-	Renderer    *RendererPlugin
+	Apps         map[string]*AppPlugin
+	Plugins      map[string]*PluginBase
+	PluginTypes  map[string]interface{}
+	Renderer     *RendererPlugin
 
 	GrafanaLatestVersion string
 	GrafanaHasUpdate     bool
@@ -35,7 +41,6 @@ type PluginManager struct {
 	log log.Logger
 }
 
-/*
 func init() {
 	registry.RegisterService(&PluginManager{})
 }
@@ -103,8 +108,8 @@ func (pm *PluginManager) startBackendPlugins(ctx context.Context) error {
 
 func (pm *PluginManager) Run(ctx context.Context) error {
 	pm.startBackendPlugins(ctx)
-	pm.updateAppDashboards()
-	pm.checkForUpdates()
+	//pm.updateAppDashboards()
+	//pm.checkForUpdates()
 
 	ticker := time.NewTicker(time.Minute * 10)
 	run := true
@@ -112,7 +117,7 @@ func (pm *PluginManager) Run(ctx context.Context) error {
 	for run {
 		select {
 		case <-ticker.C:
-			pm.checkForUpdates()
+			//pm.checkForUpdates()
 		case <-ctx.Done():
 			run = false
 			break
@@ -180,7 +185,7 @@ func (scanner *PluginScanner) walker(currentPath string, f os.FileInfo, err erro
 	}
 	return nil
 }
-*/
+
 func (scanner *PluginScanner) loadPluginJson(pluginJsonFilePath string) error {
 	currentDir := filepath.Dir(pluginJsonFilePath)
 	reader, err := os.Open(pluginJsonFilePath)
