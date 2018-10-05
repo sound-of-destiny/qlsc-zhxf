@@ -5,30 +5,29 @@ import (
 	"crypto/tls"
 	"errors"
 	"fmt"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/middleware"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/plugins"
 	"net"
 	"net/http"
 	"os"
 	"path"
 	"time"
 
-	httpstatic "github.com/sound-of-destiny/qlsc_zhxf/pkg/api/static"
-	//"github.com/sound-of-destiny/qlsc_zhxf/pkg/middleware"
-	//"github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
-	//"github.com/sound-of-destiny/qlsc_zhxf/pkg/plugins"
-
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/live"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/routing"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/static"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/bus"
-	//"github.com/sound-of-destiny/qlsc_zhxf/pkg/components/simplejson"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/components/simplejson"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/registry"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/services/rendering"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
 
 	gocache "github.com/patrickmn/go-cache"
-	macaron "gopkg.in/macaron.v1"
+	"gopkg.in/macaron.v1"
 )
 
 func init() {
@@ -186,7 +185,7 @@ func (hs *HTTPServer) applyRoutes() {
 	hs.macaron.NotFound(NotFoundHandler)
 }
 
-/*func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
+func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
 	m := hs.macaron
 
 	m.Use(middleware.Logger())
@@ -229,7 +228,7 @@ func (hs *HTTPServer) applyRoutes() {
 	}
 
 	m.Use(middleware.AddDefaultResponseHeaders())
-}*/
+}
 
 func (hs *HTTPServer) metricsEndpoint(ctx *macaron.Context) {
 	if !hs.Cfg.MetricsEndpointEnabled {
@@ -244,7 +243,7 @@ func (hs *HTTPServer) metricsEndpoint(ctx *macaron.Context) {
 		ServeHTTP(ctx.Resp, ctx.Req.Request)
 }
 
-/*func (hs *HTTPServer) healthHandler(ctx *macaron.Context) {
+func (hs *HTTPServer) healthHandler(ctx *macaron.Context) {
 	notHeadOrGet := ctx.Req.Method != http.MethodGet && ctx.Req.Method != http.MethodHead
 	if notHeadOrGet || ctx.Req.URL.Path != "/api/health" {
 		return
@@ -266,7 +265,7 @@ func (hs *HTTPServer) metricsEndpoint(ctx *macaron.Context) {
 
 	dataBytes, _ := data.EncodePretty()
 	ctx.Resp.Write(dataBytes)
-}*/
+}
 
 func (hs *HTTPServer) mapStatic(m *macaron.Macaron, rootDir string, dir string, prefix string) {
 	headers := func(c *macaron.Context) {
