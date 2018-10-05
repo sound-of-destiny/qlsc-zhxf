@@ -11,6 +11,7 @@ import (
 	"time"
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
 )
 
 var version = "0.0.1"
@@ -26,6 +27,10 @@ func main() {
 	if buildstampInt64 == 0 {
 		buildstampInt64 = time.Now().Unix()
 	}
+
+	setting.BuildVersion = version
+	setting.BuildCommit = commit
+	setting.BuildStamp = buildstampInt64
 
 	server := NewServer()
 

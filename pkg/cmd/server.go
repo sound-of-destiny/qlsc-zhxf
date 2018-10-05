@@ -4,7 +4,6 @@ import (
 	"context"
 	"flag"
 	"fmt"
-
 	"io/ioutil"
 	"net"
 	"os"
@@ -12,15 +11,26 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/facebookgo/inject"
+
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/bus"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/login"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/registry"
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/routing"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/middleware"
 
 	"golang.org/x/sync/errgroup"
+
+	// self registering services
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/cleanup"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/rendering"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/search"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/sqlstore"
 )
 
 func NewServer() *NewServerImpl {
@@ -53,31 +63,31 @@ func (g *NewServerImpl) Run() error {
 	g.loadConfiguration()
 	g.writePIDFile()
 
-	login.Init()
+	login.Init() //启动登陆模块
 	//social.NewOAuthService()
 
-	//serviceGraph := inject.Graph{}
-	//serviceGraph.Provide(&inject.Object{Value: bus.GetBus()})
-	//serviceGraph.Provide(&inject.Object{Value: g.cfg})
-	//serviceGraph.Provide(&inject.Object{Value: routing.NewRouteRegister(middleware.RequestMetrics, middleware.RequestTracing)})
+	serviceGraph := inject.Graph{}
+	serviceGraph.Provide(&inject.Object{Value: bus.GetBus()})
+	serviceGraph.Provide(&inject.Object{Value: g.cfg})
+	serviceGraph.Provide(&inject.Object{Value: routing.NewRouteRegister(middleware.RequestMetrics, middleware.RequestTracing)})
 
 	// self registered services
-	//services := registry.GetServices()
+	services := registry.GetServices()
 
 	// Add all services to dependency graph
-	//for _, service := range services {
-	//	serviceGraph.Provide(&inject.Object{Value: service.Instance})
-	//}
+	for _, service := range services {
+		serviceGraph.Provide(&inject.Object{Value: service.Instance})
+	}
 
-	//serviceGraph.Provide(&inject.Object{Value: g})
+	serviceGraph.Provide(&inject.Object{Value: g})
 
 	// Inject dependencies to services
-	//if err := serviceGraph.Populate(); err != nil {
-	//	return fmt.Errorf("Failed to populate service dependency: %v", err)
-	//}
+	if err := serviceGraph.Populate(); err != nil {
+		return fmt.Errorf("Failed to populate service dependency: %v", err)
+	}
 
 	// Init & start services
-	/*for _, service := range services {
+	for _, service := range services {
 		if registry.IsDisabled(service.Instance) {
 			continue
 		}
@@ -123,7 +133,7 @@ func (g *NewServerImpl) Run() error {
 			g.shutdownInProgress = true
 			return err
 		})
-	}*/
+	}
 
 	sendSystemdNotification("READY=1")
 
