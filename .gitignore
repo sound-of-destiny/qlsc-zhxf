@@ -13,3 +13,5 @@
 
 #
 /data/*
+/public/build
+conf/custom.ini
