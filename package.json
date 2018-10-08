@@ -1,10 +1,10 @@
 {
-  "name": "angular-io-example",
+  "name": "qlsc_zhxf",
   "version": "1.0.0",
   "private": true,
-  "description": "Example project from an angular.io guide.",
+  "description": "智慧消防",
   "scripts": {
-    "lint": "tslint ./src/**/*.ts -t verbose",
+    "lint": "tslint ./public/**/*.ts -t verbose",
     "start": "ng serve",
     "test": "ng test",
     "build": "ng build --prod",
