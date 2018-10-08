@@ -176,7 +176,7 @@ func (hs *HTTPServer) newMacaron() *macaron.Macaron {
 
 func (hs *HTTPServer) applyRoutes() {
 	// start with middlewares & static routes
-	//hs.addMiddlewaresAndStaticRoutes()
+	hs.addMiddlewaresAndStaticRoutes()
 	// then add view routes & api routes
 	hs.RouteRegister.Register(hs.macaron)
 	// then custom app proxy routes
@@ -203,15 +203,15 @@ func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
 	}
 
 	hs.mapStatic(m, setting.StaticRootPath, "build", "public/build")
-	hs.mapStatic(m, setting.StaticRootPath, "", "public")
-	hs.mapStatic(m, setting.StaticRootPath, "robots.txt", "robots.txt")
+	//hs.mapStatic(m, setting.StaticRootPath, "", "public")
+	//hs.mapStatic(m, setting.StaticRootPath, "robots.txt", "robots.txt")
 
-	if setting.ImageUploadProvider == "local" {
-		hs.mapStatic(m, hs.Cfg.ImagesDir, "", "/public/img/attachments")
-	}
+	//if setting.ImageUploadProvider == "local" {
+	//	hs.mapStatic(m, hs.Cfg.ImagesDir, "", "/public/img/attachments")
+	//}
 
 	m.Use(macaron.Renderer(macaron.RenderOptions{
-		Directory:  path.Join(setting.StaticRootPath, "views"),
+		Directory:  path.Join(setting.StaticRootPath, "build"),
 		IndentJSON: macaron.Env != macaron.PROD,
 		Delims:     macaron.Delims{Left: "[[", Right: "]]"},
 	}))

@@ -25,9 +25,9 @@ func LoginView(c *m.ReqContext) {
 	}
 
 	enabledOAuths := make(map[string]interface{})
-	for key, oauth := range setting.OAuthService.OAuthInfos {
+	/*for key, oauth := range setting.OAuthService.OAuthInfos {
 		enabledOAuths[key] = map[string]string{"name": oauth.Name}
-	}
+	}*/
 
 	viewData.Settings["oauth"] = enabledOAuths
 	viewData.Settings["disableUserSignUp"] = !setting.AllowUserSignUp
