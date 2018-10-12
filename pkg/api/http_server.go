@@ -202,8 +202,10 @@ func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
 		hs.mapStatic(hs.macaron, route.Directory, "", pluginRoute)
 	}
 
+	//hs.mapStatic(m, setting.StaticRootPath, "build", "zhxf")
+	//hs.mapStatic(m, setting.StaticRootPath, "build/assets", "assets")
 	hs.mapStatic(m, setting.StaticRootPath, "build", "public/build")
-	//hs.mapStatic(m, setting.StaticRootPath, "", "public")
+	hs.mapStatic(m, setting.StaticRootPath, "", "public")
 	//hs.mapStatic(m, setting.StaticRootPath, "robots.txt", "robots.txt")
 
 	//if setting.ImageUploadProvider == "local" {
@@ -211,7 +213,7 @@ func (hs *HTTPServer) addMiddlewaresAndStaticRoutes() {
 	//}
 
 	m.Use(macaron.Renderer(macaron.RenderOptions{
-		Directory:  path.Join(setting.StaticRootPath, "build"),
+		Directory:  path.Join(setting.StaticRootPath, "views"),
 		IndentJSON: macaron.Env != macaron.PROD,
 		Delims:     macaron.Delims{Left: "[[", Right: "]]"},
 	}))

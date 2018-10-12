@@ -2,6 +2,8 @@ package api
 
 import (
 	//"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/routing"
+	"github.com/go-macaron/binding"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/dtos"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/middleware"
 	//m "github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
 )
@@ -13,15 +15,15 @@ func (hs *HTTPServer) registerRoutes() {
 	//reqOrgAdmin := middleware.RoleAuth(m.ROLE_ADMIN)
 	//redirectFromLegacyDashboardURL := middleware.RedirectFromLegacyDashboardURL()
 	//redirectFromLegacyDashboardSoloURL := middleware.RedirectFromLegacyDashboardSoloURL()
-	//quota := middleware.Quota
-	//bind := binding.Bind
+	quota := middleware.Quota
+	bind := binding.Bind
 
 	r := hs.RouteRegister
 
 	// not logged in views
 	r.Get("/", reqSignedIn, Index)
 	//r.Get("/logout", Logout)
-	//r.Post("/login", quota("session"), bind(dtos.LoginCommand{}), Wrap(LoginPost))
+	r.Post("/login", quota("session"), bind(dtos.LoginCommand{}), Wrap(LoginPost))
 	//r.Get("/login/:name", quota("session"), OAuthLogin)
 	r.Get("/login", LoginView)
 	//r.Get("/invite/:code", Index)

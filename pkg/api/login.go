@@ -18,6 +18,7 @@ const (
 )
 
 func LoginView(c *m.ReqContext) {
+
 	viewData, err := setIndexViewData(c)
 	if err != nil {
 		c.Handle(500, "Failed to get settings", err)
