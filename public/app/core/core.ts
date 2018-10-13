@@ -35,10 +35,14 @@ import { contextSrv } from './services/context_srv';
 import { KeybindingSrv } from './services/keybindingSrv';
 import { updateLegendValues } from './time_series2';
 import TimeSeries from './time_series2';
-
+import { NavModelSrv, NavModel } from './nav_model_srv';
 import { grafanaAppDirective } from './components/grafana_app';
-/*import { liveSrv } from './live/live_srv';
+import { manageDashboardsDirective } from './components/manage_dashboards/manage_dashboards';
+import { geminiScrollbar } from './components/scroll/scroll';
+import { pageScrollbar } from './components/scroll/page_scroll';
+import { gfPageDirective } from './components/gf_page';
 
+/*import { liveSrv } from './live/live_srv';
 import { searchDirective } from './components/search/search';
 import { infoPopover } from './components/info_popover';
 import { navbarDirective } from './components/navbar/navbar';
@@ -50,13 +54,13 @@ import { sqlPartEditorDirective } from './components/sql_part/sql_part_editor';
 import { formDropdownDirective } from './components/form_dropdown/form_dropdown';
 import { helpModal } from './components/help/help';
 import { JsonExplorer } from './components/json_explorer/json_explorer';
-import { NavModelSrv, NavModel } from './nav_model_srv';
-import { geminiScrollbar } from './components/scroll/scroll';
-import { pageScrollbar } from './components/scroll/page_scroll';
-import { gfPageDirective } from './components/gf_page';
+
+
+
+
 import { orgSwitcher } from './components/org_switcher';
 import { searchResultsDirective } from './components/search/search_results';
-import { manageDashboardsDirective } from './components/manage_dashboards/manage_dashboards';*/
+*/
 
 export {
   coreModule,
@@ -82,13 +86,13 @@ export {
   KeybindingSrv,
   //helpModal,
   //JsonExplorer,
-  //NavModelSrv,
-  //NavModel,
-  //geminiScrollbar,
-  //pageScrollbar,
-  //gfPageDirective,
+  NavModelSrv,
+  NavModel,
+  geminiScrollbar,
+  pageScrollbar,
+  gfPageDirective,
   //orgSwitcher,
-  //manageDashboardsDirective,
+  manageDashboardsDirective,
   TimeSeries,
   updateLegendValues,
   //searchResultsDirective,
