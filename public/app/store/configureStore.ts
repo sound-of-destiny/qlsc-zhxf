@@ -1,20 +1,20 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
-/*import sharedReducers from 'app/core/reducers';
+import sharedReducers from 'app/core/reducers';
 import alertingReducers from 'app/features/alerting/state/reducers';
-import teamsReducers from 'app/features/teams/state/reducers';
+//import teamsReducers from 'app/features/teams/state/reducers';
 import foldersReducers from 'app/features/folders/state/reducers';
 import dashboardReducers from 'app/features/dashboard/state/reducers';
-import pluginReducers from 'app/features/plugins/state/reducers';*/
+import pluginReducers from 'app/features/plugins/state/reducers';
 
 const rootReducer = combineReducers({
-  /*...sharedReducers,
+  ...sharedReducers,
   ...alertingReducers,
-  ...teamsReducers,
+  //...teamsReducers,
   ...foldersReducers,
   ...dashboardReducers,
-  ...pluginReducers,*/
+  ...pluginReducers,
 });
 
 export let store;

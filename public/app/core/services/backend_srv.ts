@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import coreModule from 'app/core/core_module';
 import appEvents from 'app/core/app_events';
-//import { DashboardModel } from 'app/features/dashboard/dashboard_model';
+import { DashboardModel } from 'app/features/dashboard/dashboard_model';
 
 export class BackendSrv {
   private inFlightRequests = {};
@@ -278,7 +278,7 @@ export class BackendSrv {
     return this.executeInOrder(tasks, []);
   }
 
-  /*moveDashboards(dashboardUids, toFolder) {
+  moveDashboards(dashboardUids, toFolder) {
     const tasks = [];
 
     for (const uid of dashboardUids) {
@@ -334,7 +334,7 @@ export class BackendSrv {
     });
 
     return deferred.promise;
-  }*/
+  }
 
   private createTask(fn, ignoreRejections, ...args: any[]) {
     return result => {

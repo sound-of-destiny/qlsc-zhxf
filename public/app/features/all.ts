@@ -1,13 +1,6 @@
-/*
-
-
-
-import './playlist/all';
-
+//import './playlist/all';
 
 import './admin';
-
-*/
 import './org/all';
 import './dashboard/all';
 import './manage-dashboards';
