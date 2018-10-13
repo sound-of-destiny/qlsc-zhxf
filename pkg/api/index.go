@@ -147,7 +147,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 		SubTitle: "Show main views",
 		Icon:     "gicon gicon-home",
 		Url:      setting.AppSubUrl + "/",
-		Children: []*dtos.NavLink{},
+		Children: make([]*dtos.NavLink, 0),
 	})
 
 	//dashboard列表
@@ -157,7 +157,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 		SubTitle: "List of dashboard",
 		Icon:     "gicon gicon-dashboard",
 		Url:      setting.AppSubUrl + "/dashboards",
-		Children: []*dtos.NavLink{},
+		Children: make([]*dtos.NavLink, 0),
 	})
 
 	//探索页面

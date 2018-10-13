@@ -8,7 +8,7 @@ import appEvents from 'app/core/app_events';
 import Drop from 'tether-drop';
 import colors from 'app/core/utils/colors';
 import { BackendSrv, setBackendSrv } from 'app/core/services/backend_srv';
-//import { DatasourceSrv } from 'app/features/plugins/datasource_srv';
+import { DatasourceSrv } from 'app/features/plugins/datasource_srv';
 import { configureStore } from 'app/store/configureStore';
 
 export class GrafanaCtrl {
@@ -21,8 +21,8 @@ export class GrafanaCtrl {
     $controller,
     contextSrv,
     bridgeSrv,
-    backendSrv: BackendSrv
-    //datasourceSrv: DatasourceSrv
+    backendSrv: BackendSrv,
+    datasourceSrv: DatasourceSrv
   ) {
     // sets singleston instances for angular services so react components can access them
     configureStore();
@@ -123,12 +123,12 @@ export function grafanaAppDirective(/*playlistSrv, */ contextSrv, $timeout, $roo
         body.toggleClass('sidemenu-hidden');
       });
 
-      scope.$watch(
-        //() => playlistSrv.isPlaying,
+      /*scope.$watch(
+        () => playlistSrv.isPlaying,
         newValue => {
           elem.toggleClass('view-mode--playlist', newValue === true);
         }
-      );
+      );*/
 
       // check if we are in server side render
       if (document.cookie.indexOf('renderKey') !== -1) {

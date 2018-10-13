@@ -1,4 +1,4 @@
-/*import './dashboard_ctrl';
+import './dashboard_ctrl';
 import './alerting_srv';
 import './history/history';
 
@@ -28,13 +28,13 @@ import './folder_picker/folder_picker';
 import './move_to_folder_modal/move_to_folder';
 import './settings/settings';
 import './panellinks/module';
-import './dashlinks/module';*/
+import './dashlinks/module';
 
-//import './dashboard_srv';
+import './dashboard_srv';
 import './dashboard_loader_srv';
 
 // angular wrappers
-/*import { react2AngularDirective } from 'app/core/utils/react2angular';
+import { react2AngularDirective } from 'app/core/utils/react2angular';
 import DashboardPermissions from './permissions/DashboardPermissions';
 
 react2AngularDirective('dashboardPermissions', DashboardPermissions, ['dashboardId', 'folder']);
@@ -46,4 +46,4 @@ import { CreateFolderCtrl } from './create_folder_ctrl';
 
 coreModule.controller('FolderDashboardsCtrl', FolderDashboardsCtrl);
 coreModule.controller('DashboardImportCtrl', DashboardImportCtrl);
-coreModule.controller('CreateFolderCtrl', CreateFolderCtrl);*/
+coreModule.controller('CreateFolderCtrl', CreateFolderCtrl);

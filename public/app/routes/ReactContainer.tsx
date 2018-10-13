@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import coreModule from 'app/core/core_module';
 import { store } from 'app/store/configureStore';
 import { BackendSrv } from 'app/core/services/backend_srv';
-//import { DatasourceSrv } from 'app/features/plugins/datasource_srv';
+import { DatasourceSrv } from 'app/features/plugins/datasource_srv';
 import { ContextSrv } from 'app/core/services/context_srv';
 
 function WrapInProvider(store, Component, props) {
@@ -21,7 +21,7 @@ export function reactContainer(
   $route,
   $location,
   backendSrv: BackendSrv,
-  //datasourceSrv: DatasourceSrv,
+  datasourceSrv: DatasourceSrv,
   contextSrv: ContextSrv
 ) {
   return {
@@ -44,7 +44,7 @@ export function reactContainer(
 
       const props = {
         backendSrv: backendSrv,
-        //datasourceSrv: datasourceSrv,
+        datasourceSrv: datasourceSrv,
         routeParams: $route.current.params,
       };
 

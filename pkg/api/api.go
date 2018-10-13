@@ -6,14 +6,14 @@ import (
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/dtos"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/api/routing"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/middleware"
-	//m "github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
+	m "github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
 )
 
 func (hs *HTTPServer) registerRoutes() {
 	reqSignedIn := middleware.Auth(&middleware.AuthOptions{ReqSignedIn: true})
 	reqGrafanaAdmin := middleware.Auth(&middleware.AuthOptions{ReqSignedIn: true, ReqGrafanaAdmin: true})
 	//reqEditorRole := middleware.RoleAuth(m.ROLE_EDITOR, m.ROLE_ADMIN)
-	//reqOrgAdmin := middleware.RoleAuth(m.ROLE_ADMIN)
+	reqOrgAdmin := middleware.RoleAuth(m.ROLE_ADMIN)
 	//redirectFromLegacyDashboardURL := middleware.RedirectFromLegacyDashboardURL()
 	//redirectFromLegacyDashboardSoloURL := middleware.RedirectFromLegacyDashboardSoloURL()
 	quota := middleware.Quota
@@ -227,7 +227,7 @@ func (hs *HTTPServer) registerRoutes() {
 		// Preferences
 		apiRoute.Group("/preferences", func(prefRoute routing.RouteRegister) {
 			prefRoute.Post("/set-home-dash", bind(m.SavePreferencesCommand{}), Wrap(SetHomeDashboard))
-		})
+		})*/
 
 		// Data sources
 		apiRoute.Group("/datasources", func(datasourceRoute routing.RouteRegister) {
@@ -242,7 +242,7 @@ func (hs *HTTPServer) registerRoutes() {
 
 		apiRoute.Get("/datasources/id/:name", Wrap(GetDataSourceIDByName), reqSignedIn)
 
-		apiRoute.Get("/plugins", Wrap(GetPluginList))
+		/*apiRoute.Get("/plugins", Wrap(GetPluginList))
 		apiRoute.Get("/plugins/:pluginId/settings", Wrap(GetPluginSettingByID))
 		apiRoute.Get("/plugins/:pluginId/markdown/:name", Wrap(GetPluginMarkdown))
 
@@ -272,10 +272,10 @@ func (hs *HTTPServer) registerRoutes() {
 				})
 			})
 		})
-
+		*/
 		// Dashboard
 		apiRoute.Group("/dashboards", func(dashboardRoute routing.RouteRegister) {
-			dashboardRoute.Get("/uid/:uid", Wrap(GetDashboard))
+			/*dashboardRoute.Get("/uid/:uid", Wrap(GetDashboard))
 			dashboardRoute.Delete("/uid/:uid", Wrap(DeleteDashboardByUID))
 
 			dashboardRoute.Get("/db/:slug", Wrap(GetDashboard))
@@ -283,9 +283,9 @@ func (hs *HTTPServer) registerRoutes() {
 
 			dashboardRoute.Post("/calculate-diff", bind(dtos.CalculateDiffOptions{}), Wrap(CalculateDashboardDiff))
 
-			dashboardRoute.Post("/db", bind(m.SaveDashboardCommand{}), Wrap(PostDashboard))
+			dashboardRoute.Post("/db", bind(m.SaveDashboardCommand{}), Wrap(PostDashboard))*/
 			dashboardRoute.Get("/home", Wrap(GetHomeDashboard))
-			dashboardRoute.Get("/tags", GetDashboardTags)
+			/*dashboardRoute.Get("/tags", GetDashboardTags)
 			dashboardRoute.Post("/import", bind(dtos.ImportDashboardCommand{}), Wrap(ImportDashboard))
 
 			dashboardRoute.Group("/id/:dashboardId", func(dashIdRoute routing.RouteRegister) {
@@ -297,66 +297,66 @@ func (hs *HTTPServer) registerRoutes() {
 					dashboardPermissionRoute.Get("/", Wrap(GetDashboardPermissionList))
 					dashboardPermissionRoute.Post("/", bind(dtos.UpdateDashboardAclCommand{}), Wrap(UpdateDashboardPermissions))
 				})
+			})*/
+		})
+		/*
+			// Dashboard snapshots
+			apiRoute.Group("/dashboard/snapshots", func(dashboardRoute routing.RouteRegister) {
+				dashboardRoute.Get("/", Wrap(SearchDashboardSnapshots))
 			})
-		})
 
-		// Dashboard snapshots
-		apiRoute.Group("/dashboard/snapshots", func(dashboardRoute routing.RouteRegister) {
-			dashboardRoute.Get("/", Wrap(SearchDashboardSnapshots))
-		})
+			// Playlist
+			apiRoute.Group("/playlists", func(playlistRoute routing.RouteRegister) {
+				playlistRoute.Get("/", Wrap(SearchPlaylists))
+				playlistRoute.Get("/:id", ValidateOrgPlaylist, Wrap(GetPlaylist))
+				playlistRoute.Get("/:id/items", ValidateOrgPlaylist, Wrap(GetPlaylistItems))
+				playlistRoute.Get("/:id/dashboards", ValidateOrgPlaylist, Wrap(GetPlaylistDashboards))
+				playlistRoute.Delete("/:id", reqEditorRole, ValidateOrgPlaylist, Wrap(DeletePlaylist))
+				playlistRoute.Put("/:id", reqEditorRole, bind(m.UpdatePlaylistCommand{}), ValidateOrgPlaylist, Wrap(UpdatePlaylist))
+				playlistRoute.Post("/", reqEditorRole, bind(m.CreatePlaylistCommand{}), Wrap(CreatePlaylist))
+			})
 
-		// Playlist
-		apiRoute.Group("/playlists", func(playlistRoute routing.RouteRegister) {
-			playlistRoute.Get("/", Wrap(SearchPlaylists))
-			playlistRoute.Get("/:id", ValidateOrgPlaylist, Wrap(GetPlaylist))
-			playlistRoute.Get("/:id/items", ValidateOrgPlaylist, Wrap(GetPlaylistItems))
-			playlistRoute.Get("/:id/dashboards", ValidateOrgPlaylist, Wrap(GetPlaylistDashboards))
-			playlistRoute.Delete("/:id", reqEditorRole, ValidateOrgPlaylist, Wrap(DeletePlaylist))
-			playlistRoute.Put("/:id", reqEditorRole, bind(m.UpdatePlaylistCommand{}), ValidateOrgPlaylist, Wrap(UpdatePlaylist))
-			playlistRoute.Post("/", reqEditorRole, bind(m.CreatePlaylistCommand{}), Wrap(CreatePlaylist))
-		})
+			// Search
+			apiRoute.Get("/search/", Search)
 
-		// Search
-		apiRoute.Get("/search/", Search)
+			// metrics
+			apiRoute.Post("/tsdb/query", bind(dtos.MetricRequest{}), Wrap(hs.QueryMetrics))
+			apiRoute.Get("/tsdb/testdata/scenarios", Wrap(GetTestDataScenarios))
+			apiRoute.Get("/tsdb/testdata/gensql", reqGrafanaAdmin, Wrap(GenerateSQLTestData))
+			apiRoute.Get("/tsdb/testdata/random-walk", Wrap(GetTestDataRandomWalk))
 
-		// metrics
-		apiRoute.Post("/tsdb/query", bind(dtos.MetricRequest{}), Wrap(hs.QueryMetrics))
-		apiRoute.Get("/tsdb/testdata/scenarios", Wrap(GetTestDataScenarios))
-		apiRoute.Get("/tsdb/testdata/gensql", reqGrafanaAdmin, Wrap(GenerateSQLTestData))
-		apiRoute.Get("/tsdb/testdata/random-walk", Wrap(GetTestDataRandomWalk))
+			apiRoute.Group("/alerts", func(alertsRoute routing.RouteRegister) {
+				alertsRoute.Post("/test", bind(dtos.AlertTestCommand{}), Wrap(AlertTest))
+				alertsRoute.Post("/:alertId/pause", reqEditorRole, bind(dtos.PauseAlertCommand{}), Wrap(PauseAlert))
+				alertsRoute.Get("/:alertId", ValidateOrgAlert, Wrap(GetAlert))
+				alertsRoute.Get("/", Wrap(GetAlerts))
+				alertsRoute.Get("/states-for-dashboard", Wrap(GetAlertStatesForDashboard))
+			})
 
-		apiRoute.Group("/alerts", func(alertsRoute routing.RouteRegister) {
-			alertsRoute.Post("/test", bind(dtos.AlertTestCommand{}), Wrap(AlertTest))
-			alertsRoute.Post("/:alertId/pause", reqEditorRole, bind(dtos.PauseAlertCommand{}), Wrap(PauseAlert))
-			alertsRoute.Get("/:alertId", ValidateOrgAlert, Wrap(GetAlert))
-			alertsRoute.Get("/", Wrap(GetAlerts))
-			alertsRoute.Get("/states-for-dashboard", Wrap(GetAlertStatesForDashboard))
-		})
+			apiRoute.Get("/alert-notifications", Wrap(GetAlertNotifications))
+			apiRoute.Get("/alert-notifiers", Wrap(GetAlertNotifiers))
 
-		apiRoute.Get("/alert-notifications", Wrap(GetAlertNotifications))
-		apiRoute.Get("/alert-notifiers", Wrap(GetAlertNotifiers))
+			apiRoute.Group("/alert-notifications", func(alertNotifications routing.RouteRegister) {
+				alertNotifications.Post("/test", bind(dtos.NotificationTestCommand{}), Wrap(NotificationTest))
+				alertNotifications.Post("/", bind(m.CreateAlertNotificationCommand{}), Wrap(CreateAlertNotification))
+				alertNotifications.Put("/:notificationId", bind(m.UpdateAlertNotificationCommand{}), Wrap(UpdateAlertNotification))
+				alertNotifications.Get("/:notificationId", Wrap(GetAlertNotificationByID))
+				alertNotifications.Delete("/:notificationId", Wrap(DeleteAlertNotification))
+			}, reqEditorRole)
 
-		apiRoute.Group("/alert-notifications", func(alertNotifications routing.RouteRegister) {
-			alertNotifications.Post("/test", bind(dtos.NotificationTestCommand{}), Wrap(NotificationTest))
-			alertNotifications.Post("/", bind(m.CreateAlertNotificationCommand{}), Wrap(CreateAlertNotification))
-			alertNotifications.Put("/:notificationId", bind(m.UpdateAlertNotificationCommand{}), Wrap(UpdateAlertNotification))
-			alertNotifications.Get("/:notificationId", Wrap(GetAlertNotificationByID))
-			alertNotifications.Delete("/:notificationId", Wrap(DeleteAlertNotification))
-		}, reqEditorRole)
+			apiRoute.Get("/annotations", Wrap(GetAnnotations))
+			apiRoute.Post("/annotations/mass-delete", reqOrgAdmin, bind(dtos.DeleteAnnotationsCmd{}), Wrap(DeleteAnnotations))
 
-		apiRoute.Get("/annotations", Wrap(GetAnnotations))
-		apiRoute.Post("/annotations/mass-delete", reqOrgAdmin, bind(dtos.DeleteAnnotationsCmd{}), Wrap(DeleteAnnotations))
+			apiRoute.Group("/annotations", func(annotationsRoute routing.RouteRegister) {
+				annotationsRoute.Post("/", bind(dtos.PostAnnotationsCmd{}), Wrap(PostAnnotation))
+				annotationsRoute.Delete("/:annotationId", Wrap(DeleteAnnotationByID))
+				annotationsRoute.Put("/:annotationId", bind(dtos.UpdateAnnotationsCmd{}), Wrap(UpdateAnnotation))
+				annotationsRoute.Delete("/region/:regionId", Wrap(DeleteAnnotationRegion))
+				annotationsRoute.Post("/graphite", reqEditorRole, bind(dtos.PostGraphiteAnnotationsCmd{}), Wrap(PostGraphiteAnnotation))
+			})
 
-		apiRoute.Group("/annotations", func(annotationsRoute routing.RouteRegister) {
-			annotationsRoute.Post("/", bind(dtos.PostAnnotationsCmd{}), Wrap(PostAnnotation))
-			annotationsRoute.Delete("/:annotationId", Wrap(DeleteAnnotationByID))
-			annotationsRoute.Put("/:annotationId", bind(dtos.UpdateAnnotationsCmd{}), Wrap(UpdateAnnotation))
-			annotationsRoute.Delete("/region/:regionId", Wrap(DeleteAnnotationRegion))
-			annotationsRoute.Post("/graphite", reqEditorRole, bind(dtos.PostGraphiteAnnotationsCmd{}), Wrap(PostGraphiteAnnotation))
-		})
-
-		// error test
-		r.Get("/metrics/error", Wrap(GenerateError))*/
+			// error test
+			r.Get("/metrics/error", Wrap(GenerateError))*/
 
 	}, reqSignedIn)
 

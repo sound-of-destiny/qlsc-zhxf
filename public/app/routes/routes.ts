@@ -269,11 +269,11 @@ export function setupAngularRoutes($routeProvider, $locationProvider) {
     .when('/alerting', {
       redirectTo: '/alerting/list',
     })
-    .when('/alerting/list', {
+    /*.when('/alerting/list', {
       templateUrl: 'public/app/features/alerting/partials/alert_list.html',
       controller: 'AlertListCtrl',
       controllerAs: 'ctrl',
-    })
+    })*/
     .when('/alerting/list', {
       template: '<react-container />',
       reloadOnSearch: false,

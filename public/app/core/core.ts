@@ -11,11 +11,11 @@ import './directives/diff-view';
 import './jquery_extended';
 import './partials';
 import './utils/outline';
-/*import './components/jsontree/jsontree';
+import './components/jsontree/jsontree';
 import './components/code_editor/code_editor';
 import './components/colorpicker/ColorPicker';
 import './components/colorpicker/SeriesColorPicker';
-import './components/colorpicker/spectrum_picker';*/
+import './components/colorpicker/spectrum_picker';
 import './services/search_srv';
 import './services/ng_react';
 
@@ -41,25 +41,29 @@ import { manageDashboardsDirective } from './components/manage_dashboards/manage
 import { geminiScrollbar } from './components/scroll/scroll';
 import { pageScrollbar } from './components/scroll/page_scroll';
 import { gfPageDirective } from './components/gf_page';
-
-/*import { liveSrv } from './live/live_srv';
+import { JsonExplorer } from './components/json_explorer/json_explorer';
 import { searchDirective } from './components/search/search';
+import { layoutSelector } from './components/layout_selector/layout_selector';
+import { sqlPartEditorDirective } from './components/sql_part/sql_part_editor';
+import { searchResultsDirective } from './components/search/search_results';
+/*import { liveSrv } from './live/live_srv';
+
 import { infoPopover } from './components/info_popover';
 import { navbarDirective } from './components/navbar/navbar';
-import { layoutSelector } from './components/layout_selector/layout_selector';
+
 import { switchDirective } from './components/switch';
 import { dashboardSelector } from './components/dashboard_selector';
 import { queryPartEditorDirective } from './components/query_part/query_part_editor';
-import { sqlPartEditorDirective } from './components/sql_part/sql_part_editor';
+
 import { formDropdownDirective } from './components/form_dropdown/form_dropdown';
 import { helpModal } from './components/help/help';
-import { JsonExplorer } from './components/json_explorer/json_explorer';
+
 
 
 
 
 import { orgSwitcher } from './components/org_switcher';
-import { searchResultsDirective } from './components/search/search_results';
+
 */
 
 export {
@@ -69,23 +73,23 @@ export {
   arrayJoin,
   grafanaAppDirective,
   //navbarDirective,
-  //searchDirective,
+  searchDirective,
   //liveSrv,
-  //layoutSelector,
+  layoutSelector,
   //switchDirective,
   //infoPopover,
   Emitter,
   appEvents,
   //dashboardSelector,
   //queryPartEditorDirective,
-  //sqlPartEditorDirective,
+  sqlPartEditorDirective,
   colors,
   //formDropdownDirective,
   assignModelProperties,
   contextSrv,
   KeybindingSrv,
   //helpModal,
-  //JsonExplorer,
+  JsonExplorer,
   NavModelSrv,
   NavModel,
   geminiScrollbar,
@@ -95,5 +99,5 @@ export {
   manageDashboardsDirective,
   TimeSeries,
   updateLegendValues,
-  //searchResultsDirective,
+  searchResultsDirective,
 };
