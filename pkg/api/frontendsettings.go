@@ -3,6 +3,7 @@ package api
 import (
 	"strconv"
 
+	"github.com/grafana/grafana/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/bus"
 	m "github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/plugins"
@@ -27,10 +28,10 @@ func getFrontendSettingsMap(c *m.ReqContext) (map[string]interface{}, error) {
 	datasources := make(map[string]interface{})
 	var defaultDatasource string
 
-	/*enabledPlugins, err := plugins.GetEnabledPlugins(c.OrgId)
+	enabledPlugins, err := plugins.GetEnabledPlugins(c.OrgId)
 	if err != nil {
 		return nil, err
-	}*/
+	}
 
 	for _, ds := range orgDataSources {
 		url := ds.Url
@@ -46,13 +47,13 @@ func getFrontendSettingsMap(c *m.ReqContext) (map[string]interface{}, error) {
 			"url":  url,
 		}
 
-		/*meta, exists := enabledPlugins.DataSources[ds.Type]
+		meta, exists := enabledPlugins.DataSources[ds.Type]
 		if !exists {
 			log.Error(3, "Could not find plugin definition for data source: %v", ds.Type)
 			continue
-		}*/
+		}
 
-		//dsMap["meta"] = meta
+		dsMap["meta"] = meta
 
 		if ds.IsDefault {
 			defaultDatasource = ds.Name
@@ -118,7 +119,7 @@ func getFrontendSettingsMap(c *m.ReqContext) (map[string]interface{}, error) {
 	}
 
 	panels := map[string]interface{}{}
-	/*for _, panel := range enabledPlugins.Panels {
+	for _, panel := range enabledPlugins.Panels {
 		panels[panel.Id] = map[string]interface{}{
 			"module":       panel.Module,
 			"baseUrl":      panel.BaseUrl,
@@ -128,7 +129,7 @@ func getFrontendSettingsMap(c *m.ReqContext) (map[string]interface{}, error) {
 			"hideFromList": panel.HideFromList,
 			"sort":         getPanelSort(panel.Id),
 		}
-	}*/
+	}
 
 	jsonObj := map[string]interface{}{
 		"defaultDatasource":          defaultDatasource,

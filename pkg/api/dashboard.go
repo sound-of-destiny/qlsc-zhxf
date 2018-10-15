@@ -324,9 +324,9 @@ func GetHomeDashboard(c *m.ReqContext) Response {
 		return Error(500, "Failed to load home dashboard", err)
 	}
 
-	if c.HasUserRole(m.ROLE_ADMIN) /* && !c.HasHelpFlag(m.HelpFlagGettingStartedPanelDismissed) */ {
+	/*if c.HasUserRole(m.ROLE_ADMIN) && !c.HasHelpFlag(m.HelpFlagGettingStartedPanelDismissed) {
 		addGettingStartedPanelToHomeDashboard(dash.Dashboard)
-	}
+	}*/
 
 	return JSON(200, &dash)
 }
