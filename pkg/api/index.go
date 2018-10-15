@@ -48,29 +48,29 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 		settings["appSubUrl"] = ""
 	}
 
-	/*hasEditPermissionInFoldersQuery := m.HasEditPermissionInFoldersQuery{SignedInUser: c.SignedInUser}
+	hasEditPermissionInFoldersQuery := m.HasEditPermissionInFoldersQuery{SignedInUser: c.SignedInUser}
 	if err := bus.Dispatch(&hasEditPermissionInFoldersQuery); err != nil {
 		return nil, err
-	}*/
+	}
 
 	var data = dtos.IndexViewData{
 		User: &dtos.CurrentUser{
-			Id:             c.UserId,
-			IsSignedIn:     c.IsSignedIn,
-			Login:          c.Login,
-			Email:          c.Email,
-			Name:           c.Name,
-			OrgCount:       c.OrgCount,
-			OrgId:          c.OrgId,
-			OrgName:        c.OrgName,
-			OrgRole:        c.OrgRole,
-			GravatarUrl:    dtos.GetGravatarUrl(c.Email),
-			IsGrafanaAdmin: c.IsGrafanaAdmin,
-			LightTheme:     prefs.Theme == lightName,
-			Timezone:       prefs.Timezone,
-			Locale:         locale,
-			HelpFlags1:     c.HelpFlags1,
-			//HasEditPermissionInFolders: hasEditPermissionInFoldersQuery.Result,
+			Id:                         c.UserId,
+			IsSignedIn:                 c.IsSignedIn,
+			Login:                      c.Login,
+			Email:                      c.Email,
+			Name:                       c.Name,
+			OrgCount:                   c.OrgCount,
+			OrgId:                      c.OrgId,
+			OrgName:                    c.OrgName,
+			OrgRole:                    c.OrgRole,
+			GravatarUrl:                dtos.GetGravatarUrl(c.Email),
+			IsGrafanaAdmin:             c.IsGrafanaAdmin,
+			LightTheme:                 prefs.Theme == lightName,
+			Timezone:                   prefs.Timezone,
+			Locale:                     locale,
+			HelpFlags1:                 c.HelpFlags1,
+			HasEditPermissionInFolders: hasEditPermissionInFoldersQuery.Result,
 		},
 		Settings:                settings,
 		Theme:                   prefs.Theme,
@@ -102,7 +102,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 		data.Theme = darkName
 	}
 
-	/*if hasEditPermissionInFoldersQuery.Result {
+	if hasEditPermissionInFoldersQuery.Result {
 		children := []*dtos.NavLink{
 			{Text: "Dashboard", Icon: "gicon gicon-dashboard-new", Url: setting.AppSubUrl + "/dashboard/new"},
 		}
@@ -120,7 +120,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 			Url:      setting.AppSubUrl + "/dashboard/new",
 			Children: children,
 		})
-	}*/
+	}
 
 	//原dashboard
 	/*dashboardChildNavs := []*dtos.NavLink{
@@ -153,7 +153,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 	//dashboard列表
 	data.NavTree = append(data.NavTree, &dtos.NavLink{
 		Text:     "监控列表",
-		Id:       "list",
+		Id:       "manage-dashboards",
 		SubTitle: "List of dashboard",
 		Icon:     "gicon gicon-dashboard",
 		Url:      setting.AppSubUrl + "/dashboards",
@@ -178,7 +178,7 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 	if setting.AlertingEnabled && (c.OrgRole == m.ROLE_ADMIN || c.OrgRole == m.ROLE_EDITOR) {
 		alertChildNavs := []*dtos.NavLink{
 			{Text: "报警规则", Id: "alert-list", Url: setting.AppSubUrl + "/alerting/list", Icon: "gicon gicon-alert-rules"},
-			{Text: "Notification channels", Id: "channels", Url: setting.AppSubUrl + "/alerting/notifications", Icon: "gicon gicon-alert-notification-channel"},
+			{Text: "提示方式", Id: "channels", Url: setting.AppSubUrl + "/alerting/notifications", Icon: "gicon gicon-alert-notification-channel"},
 		}
 
 		data.NavTree = append(data.NavTree, &dtos.NavLink{
@@ -239,21 +239,14 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 	}*/
 
 	//设置中心
-	if c.IsGrafanaAdmin || c.OrgRole == m.ROLE_ADMIN {
+	if c.IsGrafanaAdmin || c.OrgRole == m.ROLE_EDITOR {
 		cfgNode := &dtos.NavLink{
 			Id:       "cfg",
 			Text:     "设置",
 			SubTitle: "Organization: " + c.OrgName,
 			Icon:     "gicon gicon-cog",
-			Url:      setting.AppSubUrl + "/datasources",
+			Url:      setting.AppSubUrl + "/org/users",
 			Children: []*dtos.NavLink{
-				{
-					Text:        "数据源",
-					Icon:        "gicon gicon-datasources",
-					Description: "Add and configure data sources",
-					Id:          "datasources",
-					Url:         setting.AppSubUrl + "/datasources",
-				},
 				{
 					Text:        "用户",
 					Id:          "users",
@@ -262,65 +255,30 @@ func setIndexViewData(c *m.ReqContext) (*dtos.IndexViewData, error) {
 					Url:         setting.AppSubUrl + "/org/users",
 				},
 				/*{
-					Text:        "Teams",
-					Id:          "teams",
-					Description: "Manage org groups",
-					Icon:        "gicon gicon-team",
-					Url:         setting.AppSubUrl + "/org/teams",
-				},
-				{
-					Text:        "Plugins",
-					Id:          "plugins",
-					Description: "View and configure plugins",
-					Icon:        "gicon gicon-plugins",
-					Url:         setting.AppSubUrl + "/plugins",
-				},
-				{
-					Text:        "Preferences",
-					Id:          "org-settings",
-					Description: "Organization preferences",
-					Icon:        "gicon gicon-preferences",
-					Url:         setting.AppSubUrl + "/org",
-				},
-
-				{
-					Text:        "API Keys",
-					Id:          "apikeys",
-					Description: "Create & manage API keys",
-					Icon:        "gicon gicon-apikeys",
-					Url:         setting.AppSubUrl + "/org/apikeys",
+					Text:        "数据源",
+					Icon:        "gicon gicon-datasources",
+					Description: "Add and configure data sources",
+					Id:          "datasources",
+					Url:         setting.AppSubUrl + "/datasources",
 				},*/
 			},
 		}
 
-		if c.OrgRole != m.ROLE_ADMIN {
-			cfgNode = &dtos.NavLink{
-				Id:       "cfg",
-				Text:     "设置",
-				SubTitle: "Organization: " + c.OrgName,
-				Icon:     "gicon gicon-cog",
-				Url:      setting.AppSubUrl + "/admin/users",
-				Children: make([]*dtos.NavLink, 0),
-			}
-		}
-
-		if c.OrgRole == m.ROLE_ADMIN && c.IsGrafanaAdmin {
+		if c.IsGrafanaAdmin {
 			cfgNode.Children = append(cfgNode.Children, &dtos.NavLink{
 				Divider: true, HideFromTabs: true, Id: "admin-divider", Text: "Text",
 			})
-		}
 
-		if c.IsGrafanaAdmin {
 			cfgNode.Children = append(cfgNode.Children, &dtos.NavLink{
 				Text:         "管理员",
 				HideFromTabs: true,
-				SubTitle:     "Manage all users & orgs",
+				SubTitle:     "Manage all users",
 				Id:           "admin",
 				Icon:         "gicon gicon-shield",
 				Url:          setting.AppSubUrl + "/admin/users",
 				Children: []*dtos.NavLink{
 					{Text: "用户", Id: "global-users", Url: setting.AppSubUrl + "/admin/users", Icon: "gicon gicon-user"},
-					{Text: "组织", Id: "global-orgs", Url: setting.AppSubUrl + "/admin/orgs", Icon: "gicon gicon-org"},
+					{Text: "数据源", Id: "datasources", Url: setting.AppSubUrl + "/datasources", Icon: "gicon gicon-datasources"},
 					{Text: "设置", Id: "server-settings", Url: setting.AppSubUrl + "/admin/settings", Icon: "gicon gicon-preferences"},
 					{Text: "状态", Id: "server-stats", Url: setting.AppSubUrl + "/admin/stats", Icon: "fa fa-fw fa-bar-chart"},
 					{Text: "设计", Id: "styleguide", Url: setting.AppSubUrl + "/styleguide", Icon: "fa fa-fw fa-eyedropper"},

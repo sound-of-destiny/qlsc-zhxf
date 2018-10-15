@@ -17,8 +17,6 @@ import './unsaved_changes_srv';
 import './unsaved_changes_modal';
 import './timepicker/timepicker';
 import './upload';
-import './export/export_modal';
-import './export_data/export_data_modal';
 import './ad_hoc_filters';
 import './repeat_option/repeat_option';
 import './dashgrid/DashboardGridDirective';

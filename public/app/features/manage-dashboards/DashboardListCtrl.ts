@@ -3,6 +3,6 @@ export class DashboardListCtrl {
 
   /** @ngInject */
   constructor(navModelSrv) {
-    this.navModel = navModelSrv.getNav('dashboards', 'manage-dashboards', 0);
+    this.navModel = navModelSrv.getNav(/*'dashboards', */ 'manage-dashboards', 0);
   }
 }

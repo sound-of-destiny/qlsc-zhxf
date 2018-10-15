@@ -26,8 +26,11 @@ import (
 
 	"golang.org/x/sync/errgroup"
 
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/plugins"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/alerting"
 	// self registering services
 	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/cleanup"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/notifications"
 	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/rendering"
 	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/search"
 	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/sqlstore"

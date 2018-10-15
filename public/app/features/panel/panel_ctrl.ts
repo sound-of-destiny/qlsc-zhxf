@@ -292,7 +292,7 @@ export class PanelCtrl {
     dashboard.events.emit('panel-added', newPanel);
   }
 
-  sharePanel() {
+  /*sharePanel() {
     const shareScope = this.$scope.$new();
     shareScope.panel = this.panel;
     shareScope.dashboard = this.dashboard;
@@ -301,7 +301,7 @@ export class PanelCtrl {
       src: 'public/app/features/dashboard/partials/shareModal.html',
       scope: shareScope,
     });
-  }
+  }*/
 
   getInfoMode() {
     if (this.error) {

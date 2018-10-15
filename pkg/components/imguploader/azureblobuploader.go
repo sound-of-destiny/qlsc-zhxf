@@ -20,8 +20,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/grafana/grafana/pkg/log"
-	"github.com/grafana/grafana/pkg/util"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/util"
 )
 
 type AzureBlobUploader struct {

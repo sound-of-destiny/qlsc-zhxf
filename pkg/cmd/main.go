@@ -12,6 +12,9 @@ import (
 
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/setting"
+
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/alerting/conditions"
+	_ "github.com/sound-of-destiny/qlsc_zhxf/pkg/services/alerting/notifiers"
 )
 
 var version = "0.0.1"

@@ -46,24 +46,17 @@ import { searchDirective } from './components/search/search';
 import { layoutSelector } from './components/layout_selector/layout_selector';
 import { sqlPartEditorDirective } from './components/sql_part/sql_part_editor';
 import { searchResultsDirective } from './components/search/search_results';
-/*import { liveSrv } from './live/live_srv';
-
-import { infoPopover } from './components/info_popover';
 import { navbarDirective } from './components/navbar/navbar';
-
-import { switchDirective } from './components/switch';
 import { dashboardSelector } from './components/dashboard_selector';
 import { queryPartEditorDirective } from './components/query_part/query_part_editor';
-
 import { formDropdownDirective } from './components/form_dropdown/form_dropdown';
+
+/*import { liveSrv } from './live/live_srv';
+import { infoPopover } from './components/info_popover';
+import { switchDirective } from './components/switch';
+
 import { helpModal } from './components/help/help';
-
-
-
-
-
 import { orgSwitcher } from './components/org_switcher';
-
 */
 
 export {
@@ -72,7 +65,7 @@ export {
   profiler,
   arrayJoin,
   grafanaAppDirective,
-  //navbarDirective,
+  navbarDirective,
   searchDirective,
   //liveSrv,
   layoutSelector,
@@ -80,11 +73,11 @@ export {
   //infoPopover,
   Emitter,
   appEvents,
-  //dashboardSelector,
-  //queryPartEditorDirective,
+  dashboardSelector,
+  queryPartEditorDirective,
   sqlPartEditorDirective,
   colors,
-  //formDropdownDirective,
+  formDropdownDirective,
   assignModelProperties,
   contextSrv,
   KeybindingSrv,

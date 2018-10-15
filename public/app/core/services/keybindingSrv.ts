@@ -226,7 +226,7 @@ export class KeybindingSrv {
     });
 
     // share panel
-    this.bind('p s', () => {
+    /*this.bind('p s', () => {
       if (dashboard.meta.focusPanelId) {
         const shareScope = scope.$new();
         const panelInfo = dashboard.getPanelInfoById(dashboard.meta.focusPanelId);
@@ -238,7 +238,7 @@ export class KeybindingSrv {
           scope: shareScope,
         });
       }
-    });
+    });*/
 
     // collapse all rows
     this.bind('d shift+c', () => {

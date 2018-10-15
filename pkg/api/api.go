@@ -14,8 +14,8 @@ func (hs *HTTPServer) registerRoutes() {
 	reqGrafanaAdmin := middleware.Auth(&middleware.AuthOptions{ReqSignedIn: true, ReqGrafanaAdmin: true})
 	reqEditorRole := middleware.RoleAuth(m.ROLE_EDITOR, m.ROLE_ADMIN)
 	reqOrgAdmin := middleware.RoleAuth(m.ROLE_ADMIN)
-	//redirectFromLegacyDashboardURL := middleware.RedirectFromLegacyDashboardURL()
-	//redirectFromLegacyDashboardSoloURL := middleware.RedirectFromLegacyDashboardSoloURL()
+	redirectFromLegacyDashboardURL := middleware.RedirectFromLegacyDashboardURL()
+	redirectFromLegacyDashboardSoloURL := middleware.RedirectFromLegacyDashboardSoloURL()
 	quota := middleware.Quota
 	bind := binding.Bind
 
@@ -57,17 +57,17 @@ func (hs *HTTPServer) registerRoutes() {
 
 	r.Get("/styleguide", reqSignedIn, Index)
 
-	//r.Get("/plugins", reqSignedIn, Index)
-	//r.Get("/plugins/:id/edit", reqSignedIn, Index)
-	//r.Get("/plugins/:id/page/:page", reqSignedIn, Index)
+	r.Get("/plugins", reqSignedIn, Index)
+	r.Get("/plugins/:id/edit", reqSignedIn, Index)
+	r.Get("/plugins/:id/page/:page", reqSignedIn, Index)
 
 	r.Get("/d/:uid/:slug", reqSignedIn, Index)
 	r.Get("/d/:uid", reqSignedIn, Index)
-	//r.Get("/dashboard/db/:slug", reqSignedIn, redirectFromLegacyDashboardURL, Index)
+	r.Get("/dashboard/db/:slug", reqSignedIn, redirectFromLegacyDashboardURL, Index)
 	r.Get("/dashboard/script/*", reqSignedIn, Index)
 	r.Get("/dashboard-solo/snapshot/*", Index)
 	r.Get("/d-solo/:uid/:slug", reqSignedIn, Index)
-	//r.Get("/dashboard-solo/db/:slug", reqSignedIn, redirectFromLegacyDashboardSoloURL, Index)
+	r.Get("/dashboard-solo/db/:slug", reqSignedIn, redirectFromLegacyDashboardSoloURL, Index)
 	r.Get("/dashboard-solo/script/*", reqSignedIn, Index)
 	r.Get("/import/dashboard", reqSignedIn, Index)
 	r.Get("/dashboards/", reqSignedIn, Index)
@@ -223,11 +223,11 @@ func (hs *HTTPServer) registerRoutes() {
 			keysRoute.Post("/", quota("api_key"), bind(m.AddApiKeyCommand{}), Wrap(AddAPIKey))
 			keysRoute.Delete("/:id", Wrap(DeleteAPIKey))
 		}, reqOrgAdmin)
-
+		*/
 		// Preferences
 		apiRoute.Group("/preferences", func(prefRoute routing.RouteRegister) {
 			prefRoute.Post("/set-home-dash", bind(m.SavePreferencesCommand{}), Wrap(SetHomeDashboard))
-		})*/
+		})
 
 		// Data sources
 		apiRoute.Group("/datasources", func(datasourceRoute routing.RouteRegister) {
@@ -242,7 +242,7 @@ func (hs *HTTPServer) registerRoutes() {
 
 		apiRoute.Get("/datasources/id/:name", Wrap(GetDataSourceIDByName), reqSignedIn)
 
-		/*apiRoute.Get("/plugins", Wrap(GetPluginList))
+		apiRoute.Get("/plugins", Wrap(GetPluginList))
 		apiRoute.Get("/plugins/:pluginId/settings", Wrap(GetPluginSettingByID))
 		apiRoute.Get("/plugins/:pluginId/markdown/:name", Wrap(GetPluginMarkdown))
 
@@ -272,10 +272,10 @@ func (hs *HTTPServer) registerRoutes() {
 				})
 			})
 		})
-		*/
+
 		// Dashboard
 		apiRoute.Group("/dashboards", func(dashboardRoute routing.RouteRegister) {
-			/*dashboardRoute.Get("/uid/:uid", Wrap(GetDashboard))
+			dashboardRoute.Get("/uid/:uid", Wrap(GetDashboard))
 			dashboardRoute.Delete("/uid/:uid", Wrap(DeleteDashboardByUID))
 
 			dashboardRoute.Get("/db/:slug", Wrap(GetDashboard))
@@ -283,9 +283,9 @@ func (hs *HTTPServer) registerRoutes() {
 
 			dashboardRoute.Post("/calculate-diff", bind(dtos.CalculateDiffOptions{}), Wrap(CalculateDashboardDiff))
 
-			dashboardRoute.Post("/db", bind(m.SaveDashboardCommand{}), Wrap(PostDashboard))*/
+			dashboardRoute.Post("/db", bind(m.SaveDashboardCommand{}), Wrap(PostDashboard))
 			dashboardRoute.Get("/home", Wrap(GetHomeDashboard))
-			/*dashboardRoute.Get("/tags", GetDashboardTags)
+			dashboardRoute.Get("/tags", GetDashboardTags)
 			dashboardRoute.Post("/import", bind(dtos.ImportDashboardCommand{}), Wrap(ImportDashboard))
 
 			dashboardRoute.Group("/id/:dashboardId", func(dashIdRoute routing.RouteRegister) {
@@ -297,7 +297,7 @@ func (hs *HTTPServer) registerRoutes() {
 					dashboardPermissionRoute.Get("/", Wrap(GetDashboardPermissionList))
 					dashboardPermissionRoute.Post("/", bind(dtos.UpdateDashboardAclCommand{}), Wrap(UpdateDashboardPermissions))
 				})
-			})*/
+			})
 		})
 
 		/*// Dashboard snapshots
@@ -316,14 +316,14 @@ func (hs *HTTPServer) registerRoutes() {
 			playlistRoute.Post("/", reqEditorRole, bind(m.CreatePlaylistCommand{}), Wrap(CreatePlaylist))
 		})
 
-		// Search
-		apiRoute.Get("/search/", Search)
-
 		// metrics
 		apiRoute.Post("/tsdb/query", bind(dtos.MetricRequest{}), Wrap(hs.QueryMetrics))
 		apiRoute.Get("/tsdb/testdata/scenarios", Wrap(GetTestDataScenarios))
 		apiRoute.Get("/tsdb/testdata/gensql", reqGrafanaAdmin, Wrap(GenerateSQLTestData))
 		apiRoute.Get("/tsdb/testdata/random-walk", Wrap(GetTestDataRandomWalk))*/
+
+		// Search
+		apiRoute.Get("/search/", Search)
 
 		apiRoute.Group("/alerts", func(alertsRoute routing.RouteRegister) {
 			alertsRoute.Post("/test", bind(dtos.AlertTestCommand{}), Wrap(AlertTest))
@@ -374,10 +374,10 @@ func (hs *HTTPServer) registerRoutes() {
 	}, reqGrafanaAdmin)
 
 	// rendering
-	//r.Get("/render/*", reqSignedIn, hs.RenderToPng)
+	r.Get("/render/*", reqSignedIn, hs.RenderToPng)
 
 	// grafana.net proxy
-	//r.Any("/api/gnet/*", reqSignedIn, ProxyGnetRequest)
+	r.Any("/api/gnet/*", reqSignedIn, ProxyGnetRequest)
 
 	// Gravatar service.
 	avatarCacheServer := avatar.NewCacheServer()

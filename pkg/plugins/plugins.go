@@ -108,8 +108,8 @@ func (pm *PluginManager) startBackendPlugins(ctx context.Context) error {
 
 func (pm *PluginManager) Run(ctx context.Context) error {
 	pm.startBackendPlugins(ctx)
-	//pm.updateAppDashboards()
-	//pm.checkForUpdates()
+	pm.updateAppDashboards()
+	pm.checkForUpdates()
 
 	ticker := time.NewTicker(time.Minute * 10)
 	run := true

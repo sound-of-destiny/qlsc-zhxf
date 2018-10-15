@@ -9,7 +9,7 @@ export class DataSourcesCtrl {
 
   /** @ngInject */
   constructor(private $scope, private backendSrv, private datasourceSrv, private navModelSrv) {
-    this.navModel = this.navModelSrv.getNav('cfg', 'datasources', 0);
+    this.navModel = this.navModelSrv.getNav('cfg', 'admin', 'datasources', 1);
     backendSrv.get('/api/datasources').then(result => {
       this.datasources = result;
       this.unfiltered = result;

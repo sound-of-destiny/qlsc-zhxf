@@ -9,7 +9,7 @@ export class DashNavCtrl {
   titleTooltip: string;
 
   /** @ngInject */
-  constructor(private $scope, private dashboardSrv, private $location, public playlistSrv) {
+  constructor(private $scope, private dashboardSrv, private $location /*, public playlistSrv*/) {
     appEvents.on('save-dashboard', this.saveDashboard.bind(this), $scope);
 
     if (this.dashboard.meta.isSnapshot) {

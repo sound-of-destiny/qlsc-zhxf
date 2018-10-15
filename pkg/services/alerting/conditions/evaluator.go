@@ -3,9 +3,9 @@ package conditions
 import (
 	"encoding/json"
 
-	"github.com/grafana/grafana/pkg/components/null"
-	"github.com/grafana/grafana/pkg/components/simplejson"
-	"github.com/grafana/grafana/pkg/services/alerting"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/components/null"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/components/simplejson"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/services/alerting"
 )
 
 var (

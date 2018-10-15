@@ -10,7 +10,7 @@ export class CreateFolderCtrl {
 
   /** @ngInject */
   constructor(private backendSrv, private $location, private validationSrv, navModelSrv) {
-    this.navModel = navModelSrv.getNav('dashboards', 'manage-dashboards', 0);
+    this.navModel = navModelSrv.getNav(/*'dashboards', */ 'manage-dashboards', 0);
   }
 
   create() {

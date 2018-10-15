@@ -8,7 +8,7 @@ import (
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/log"
 	"github.com/sound-of-destiny/qlsc_zhxf/pkg/models"
 
-	"github.com/grafana/grafana/pkg/services/alerting"
+	"github.com/sound-of-destiny/qlsc_zhxf/pkg/services/alerting"
 )
 
 const (
